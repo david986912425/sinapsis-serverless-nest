@@ -1,4 +1,4 @@
-service: aws-nestjs-starter
+service: sinapsis-serverless-nest
 
 provider:
   name: aws

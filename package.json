@@ -1,5 +1,5 @@
 {
-  "name": "aws-nestjs-starter",
+  "name": "sinapsis-serverless-nest",
   "version": "0.0.1",
   "description": "A starter project that makes creating a deployable AWS Serverless project extremely easy",
   "author": "hardyscc",
