@@ -9,16 +9,11 @@
 ## 📦 Instalación
 
 ```bash
-git clone https://github.com/hardyscc/aws-nestjs-starter.git <Your_Project_Name>
-cd <Your_Project_Name>
+git clone git@github.com:david986912425/sinapsis-serverless-nest.git
+cd sinapsis-serverless-nest
 
 npm install
 ```
-
-Luego, reemplaza todas las referencias a aws-nestjs-starter por el nombre de tu proyecto en los siguientes archivos:
-- package.json
-- serverless.yml
-- .env
 
 ## Local Offline Development
 
