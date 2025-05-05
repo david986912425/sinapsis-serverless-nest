@@ -104,9 +104,7 @@ export class CampaignService {
   async findAll(filterDto: FilterCampaignDto): Promise<CampaignEntity[]> {
     const { startDate, endDate } = filterDto;
 
-    const query = this.campaignRepository
-      .createQueryBuilder('campaign')
-      .leftJoinAndSelect('campaign.user', 'user');
+    const query = this.campaignRepository.createQueryBuilder('campaign');
 
     if (startDate) {
       query.andWhere('campaign.created_at >= :startDate', { startDate });
