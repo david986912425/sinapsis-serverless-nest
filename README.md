@@ -23,7 +23,7 @@ docker compose up
 
 ```bash
 # Si deseas iniciar el servidor local pero conectándote a una base de datos MySQL en línea:
-$ npm run sls:online
+$ npm run sls:offline
 ```
 
 ## Documentacion

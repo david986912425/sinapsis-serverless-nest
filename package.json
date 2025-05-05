@@ -21,10 +21,7 @@
     "test:cov": "jest --verbose --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "ddb:install": "sls dynamodb install",
-    "ddb:start": "sls dynamodb start",
-    "sls:offline": "cross-env NO_COLOR= cross-env IS_DDB_LOCAL=true sls offline",
-    "sls:online": "cross-env NO_COLOR= sls offline",
+    "sls:offline": "cross-env NO_COLOR= sls offline",
     "genres": "ts-node genres.ts -- \"src/**/*.schema.ts\" \"resource/dynamodb.yml\""
   },
   "dependencies": {
