@@ -58,7 +58,7 @@ export class CampaignService {
       .createQueryBuilder('campaign')
       .where('campaign.process_status = :status', { status: 1 })
       .andWhere(
-        "CONCAT(campaign.process_date, ' ', campaign.process_hour) <= :datetime",
+        "STR_TO_DATE(CONCAT(campaign.process_date, ' ', campaign.process_hour), '%Y-%m-%d %H:%i') <= STR_TO_DATE(:datetime, '%Y-%m-%d %H:%i')",
         { datetime },
       )
       .getMany();
