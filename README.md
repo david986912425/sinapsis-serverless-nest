@@ -15,6 +15,10 @@ cd sinapsis-serverless-nest
 npm install
 ```
 
+Si no tiene Mysql puede correrlo con docker compose
+```bash
+docker compose up 
+```
 ## Local Offline Development
 
 ```bash
