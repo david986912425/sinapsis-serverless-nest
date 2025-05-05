@@ -37,7 +37,6 @@ export const handler: APIGatewayProxyHandler = async (
 };
 
 export const processPendingCampaigns = async () => {
-  console.log('Procesando campañas pendientes...');
   const appContext = await NestFactory.createApplicationContext(AppModule);
   const campaignService = appContext.get(CampaignService);
 

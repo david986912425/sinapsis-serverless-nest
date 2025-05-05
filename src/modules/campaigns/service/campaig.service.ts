@@ -39,8 +39,6 @@ export class CampaignService {
       processHour,
     );
 
-    console.log('processHour', pendingCampaigns);
-
     for (const campaign of pendingCampaigns) {
       await this.markCampaignAsProcessing(campaign);
       const phoneNumbers = this.getPhoneNumbers(campaign.phone_list);
