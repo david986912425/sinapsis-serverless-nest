@@ -1,0 +1,36 @@
+service: aws-nestjs-starter
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  stage: ${opt:stage, 'dev'}
+  region: ${opt:region, 'us-east-1'}
+  environment:
+    SERVICE: ${self:service}
+    STAGE: ${self:provider.stage}
+    REGION: ${self:provider.region}
+    NO_COLOR: ${env:NO_COLOR, 'true'}
+    IS_DDB_LOCAL: ${env:IS_DDB_LOCAL, 'false'}
+  apiGateway:
+    shouldStartNameWithService: true
+
+plugins:
+  - serverless-plugin-typescript
+  - serverless-offline
+
+package:
+  individually: true
+
+functions:
+  index-function:
+    handler: src/index.handler
+    events:
+      - http:
+          cors: true
+          path: '{proxy+}'
+          method: any
+  processPendingCampaigns:
+    handler: src/index.processPendingCampaigns
+    events:
+      - schedule:
+          rate: rate(1 minute)
